@@ -1,0 +1,13 @@
+﻿{
+  "id": "c870a7b7-8195-470b-9f86-db73322e70d9",
+  "CourseId": "4606B1EA-337E-4A59-9101-ABEA46C6C2D3",
+  "Stock": 10,
+  "Price": 100,
+  "Origprice": 120,
+  "PropItems": [
+    {
+      "id": "4606B1EA-337E-4A59-9101-ABEA46C6C2D3",
+      "name": "套餐1"
+    }
+  ]
+}

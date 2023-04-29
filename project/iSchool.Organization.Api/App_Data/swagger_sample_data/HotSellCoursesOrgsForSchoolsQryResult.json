@@ -1,0 +1,75 @@
+﻿{
+  "HotSellCourses": [
+    {
+      "id": "d83436c1-cb19-4d2a-8db0-15d0d736d823",
+      "id_s": "4u",
+      "orgName": "音乐壳",
+      "title": "一块钱10节思维体验课",
+      "subtitle": "一块钱10节思维体验课，一块钱10节思维体验课",
+      "subject": 107,
+      "banner": "https://cos.sxkid.com/images/org/eval/e0f6c18a4a0a48c0baae09d138e63684/e0f6c18a4a0a48c0baae09d138e63684.png",
+      "price": 0.03,
+      "origPrice": null,
+      "authentication": true
+    },
+    {
+      "id": "d83436c1-cb19-4d2a-8db0-15d0d736d823",
+      "id_s": "4u",
+      "orgName": "音乐壳",
+      "title": "一块钱10节思维体验课",
+      "subtitle": "一块钱10节思维体验课，一块钱10节思维体验课",
+      "subject": 107,
+      "banner": "https://cos.sxkid.com/images/org/eval/e0f6c18a4a0a48c0baae09d138e63684/e0f6c18a4a0a48c0baae09d138e63684.png",
+      "price": 0.03,
+      "origPrice": null,
+      "authentication": true
+    },
+    {
+      "id": "d83436c1-cb19-4d2a-8db0-15d0d736d823",
+      "id_s": "4u",
+      "orgName": "音乐壳",
+      "title": "一块钱10节思维体验课",
+      "subtitle": "一块钱10节思维体验课，一块钱10节思维体验课",
+      "subject": 107,
+      "banner": "https://cos.sxkid.com/images/org/eval/e0f6c18a4a0a48c0baae09d138e63684/e0f6c18a4a0a48c0baae09d138e63684.png",
+      "price": 0.03,
+      "origPrice": null,
+      "authentication": true
+    }
+  ],
+  "RecommendOrgs": [
+    {
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "id_s": "aa",
+      "name": "虎叔叔",
+      "logo": "https://cos.sxkid.com/images/org/eval/e0f6c18a4a0a48c0baae09d138e63684/e0f6c18a4a0a48c0baae09d138e63684.png",
+      "authentication": true,
+      "desc": "虎叔叔",
+      "subdesc": "是土豪",
+      "courceCount": 5,
+      "evaluationCount": 10
+    },
+    {
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "id_s": "aa",
+      "name": "虎叔叔",
+      "logo": "https://cos.sxkid.com/images/org/eval/e0f6c18a4a0a48c0baae09d138e63684/e0f6c18a4a0a48c0baae09d138e63684.png",
+      "authentication": true,
+      "desc": "虎叔叔",
+      "subdesc": "是土豪",
+      "courceCount": 5,
+      "evaluationCount": 10
+    },
+    {
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "id_s": "aa",
+      "name": "虎叔叔",
+      "logo": "https://cos.sxkid.com/images/org/eval/e0f6c18a4a0a48c0baae09d138e63684/e0f6c18a4a0a48c0baae09d138e63684.png",
+      "authentication": true,
+      "desc": "虎叔叔",
+      "subdesc": "是土豪",
+      "courceCount": 5,
+      "evaluationCount": 10
+    }
+  ]
+}

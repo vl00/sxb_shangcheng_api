@@ -1,0 +1,65 @@
+﻿{
+  "pageInfo": {
+    "currentPageItems": [
+      {
+        "id": "3fa85f64-5727-4562-b3fc-2c963f66afa6",
+        "recvUsername": "虎叔叔",
+        "recvMobile": "13789054321",
+        "address": "广州养鸡村14楼",
+        "isDefault": true,
+        "postalcode": "",
+        "province": "广东",
+        "city": "广州",
+        "area": "养鸡村"
+      },
+      {
+        "id": "3fa85f64-5717-4562-b3fc-2c965f66afa6",
+        "recvUsername": "虎叔叔",
+        "recvMobile": "13789054321",
+        "address": "广州养鸡村14楼",
+        "isDefault": false,
+        "postalcode": "",
+        "province": "广东",
+        "city": "广州",
+        "area": "养鸡村"
+      },
+      {
+        "id": "3fa84f64-5717-4562-b3fc-2c963f66afa6",
+        "recvUsername": "虎叔叔",
+        "recvMobile": "13789054321",
+        "address": "广州养鸡村14楼",
+        "isDefault": false,
+        "postalcode": "",
+        "province": "广东",
+        "city": "广州",
+        "area": "养鸡村"
+      },
+      {
+        "id": "3fa85f64-5717-4562-b3fc-2c963f86afa6",
+        "recvUsername": "虎叔叔",
+        "recvMobile": "13789054321",
+        "address": "广州养鸡村14楼",
+        "isDefault": false,
+        "postalcode": "",
+        "province": "广东",
+        "city": "广州",
+        "area": "养鸡村"
+      },
+      {
+        "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "recvUsername": "虎叔叔",
+        "recvMobile": "13789054321",
+        "address": "广州养鸡村14楼",
+        "isDefault": false,
+        "postalcode": "",
+        "province": "广东",
+        "city": "广州",
+        "area": "养鸡村"
+      }
+    ],
+    "currentPageIndex": 1,
+    "pageSize": 10,
+    "totalItemCount": 5,
+    //"totalPageCount": 1
+  }
+}

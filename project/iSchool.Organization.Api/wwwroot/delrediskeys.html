@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>del-redis-keys</title>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+	
+</style>
+</head>
+<body>
+<div class="form-horizontal" style="margin-top:10px;margin-left:10px;">
+    <div class="form-group">
+        <div class="col-md-10">
+            <label for="env_dev">
+                <input name="env_dev" id="env_dev" type="radio" g="env" />测试
+            </label>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="env_prod">
+                <input name="env_prod" id="env_prod" type="radio" g="env" />正式
+            </label>
+            <span style="margin-left:50px;"></span>
+            <input type="submit" id="submit" value="clear" class="btn btn-success" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            <textarea name="txt" id="txt" rows="5" cols="100" placeholder="输入key一行一个"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-5">
+            <pre>
+更详细的keys请点击:
+            <a href="https://docs.qq.com/sheet/DTU5NWWdWcnVnTW9P?tab=BB08J2" target="_blank">https://docs.qq.com/sheet/DTU5NWWdWcnVnTW9P?tab=BB08J2</a>
+商品：
+    org:course:*   
+    org:courses:*   
+    org:course_goods:*
+品牌：
+    org:organization:*     
+    org:organizations:*   
+主题商城:
+    org:mallthemes:*
+前端商城分类:
+    org:catogoryItems:*
+            </pre>
+        </div>
+        <div class="col-md-5">
+            <pre>
+学校:
+    ext:adData:*
+    splext:*
+            </pre>
+        </div>
+        <div class="col-md-5">
+            <pre>
+中职:
+    svs:*
+            </pre>
+        </div>
+    </div>
+</div>
+<!-- js -->
+<script>
+    (function ($, JSON) {
+        if (typeof $.postJSON === 'undefined') {
+            if (!JSON || !JSON.stringify) throw "jquery.postJSON need 'JSON.stringify' api to serialize data";
+            $.extend({
+                postJSON: function (url, data, callback, type) {
+                    if ($.isFunction(data)) {
+                        type = type || callback;
+                        callback = data;
+                        data = undefined;
+                    }
+                    if ($.type(data) == 'string') data = data;
+                    else data = JSON.stringify(data);
+                    var o = {
+                        type: 'POST',
+                        url: url,
+                        data: data,
+                        dataType: type, //'json',
+                        contentType: 'application/json'
+                    };
+                    return callback && (o.success = callback), $.ajax(o);
+                }
+            });
+        }
+    })(jQuery, JSON);
+</script>
+<script>
+    var env, b_on_clear_keys;
+
+    if (location.href.indexOf('https://org.sxkid.com') == 0) {
+        env = 'prod';
+    }
+    if (location.href.indexOf('https://orgtest.sxkid.com') == 0) {
+        env = 'dev';
+    }
+
+    $(function () {
+        $('input[name=env_' + env + ']').prop('checked', 'checked');
+        $('[g=env]').on('click', function () {
+            var self = $(this), b = self.prop('checked');
+            $('[g=env]').prop('checked', false);
+            self.prop('checked', 'checked');
+            //
+            if (b) env = self.attr('name').replace('env_', '');
+        });
+
+        $('#submit').on('click', on_clear_keys);
+    });
+
+    function on_clear_keys() {
+        var keys = $('#txt').val();
+        if (!keys) return doalert('请输入key');
+        keys = $.trim(keys).split('\n');
+        if (!keys || !keys.length) return doalert('请输入key');
+        keys = $.map(keys, function (k) { return $.trim(k) });
+        //console.log(keys);
+        if (b_on_clear_keys) return;
+        b_on_clear_keys = true;
+        var url = getBaseUrl() + '/api/test/delrediskeys';
+        console.log('calling ' + url + '\n' + JSON.stringify(keys));
+        $.postJSON(url, keys).then(function (res) {
+            console.log(res), b_on_clear_keys = false;
+            if (!res.succeed) {
+                return doalert(res.msg);
+            }
+            doalert('操作成功');
+        }, function () {
+            b_on_clear_keys = false;
+            doalert('网络异常');
+        });
+    }
+
+    function getBaseUrl() {
+        if (env == 'dev') return 'https://orgtest.sxkid.com';
+        if (env == 'prod') return 'https://org.sxkid.com';
+        return 'https://orgtest.sxkid.com';
+    }
+
+    function doalert(str) {
+        window.alert(str);
+    }
+</script>
+</body>
+</html>

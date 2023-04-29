@@ -1,0 +1,97 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <UserSecretsId>324ac026-0814-4d1e-aeb0-7c437c290f6b</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\PC\Data\**" />
+    <Compile Remove="Areas\PC\Models\**" />
+    <Compile Remove="Areas\PC\Views\**" />
+    <Compile Remove="LogFiles\**" />
+    <Content Remove="Areas\PC\Data\**" />
+    <Content Remove="Areas\PC\Models\**" />
+    <Content Remove="Areas\PC\Views\**" />
+    <Content Remove="LogFiles\**" />
+    <EmbeddedResource Remove="Areas\PC\Data\**" />
+    <EmbeddedResource Remove="Areas\PC\Models\**" />
+    <EmbeddedResource Remove="Areas\PC\Views\**" />
+    <EmbeddedResource Remove="LogFiles\**" />
+    <None Remove="Areas\PC\Data\**" />
+    <None Remove="Areas\PC\Models\**" />
+    <None Remove="Areas\PC\Views\**" />
+    <None Remove="LogFiles\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="..\iSchool.Api.Shared\ModelBinders\BindBoolean.cs" Link="ModelBinders\BindBoolean.cs" />
+    <Compile Include="..\iSchool.Api.Shared\ModelBinders\BindFormFile.cs" Link="ModelBinders\BindFormFile.cs" />
+    <Compile Include="..\iSchool.Api.Shared\Swagger\ApiDocParameter.cs" Link="Swagger\ApiDocParameter.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="App_Data\images\evlt_bg.png" />
+  </ItemGroup>  
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.Redis" Version="3.1.2" />
+    <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="3.1.1" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.0.2" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.0.1" />
+    <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="5.1.4" />
+    <PackageReference Include="DotNetCore.CAP.SqlServer" Version="5.1.4" />
+    <PackageReference Include="FluentValidation" Version="9.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="NLog" Version="4.7.9" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.12.0" />
+    <PackageReference Include="NLog.Targets.Http" Version="1.0.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="5.6.3" />
+  </ItemGroup>  
+
+  <ItemGroup>
+    <ProjectReference Include="..\iSchool.Infrastructure\iSchool.Infrastructure.csproj" />
+    <ProjectReference Include="..\iSchool.Organization.Appliaction\iSchool.Organization.Appliaction.csproj" />
+    <ProjectReference Include="..\Sxb.DelayTask.Abstraction\Sxb.DelayTask.Abstraction.csproj" />
+    <ProjectReference Include="..\Sxb.DelayTask.RabbitMQ\Sxb.DelayTask.RabbitMQ.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="nlog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="nlog.Development.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="nlog.Production.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <!--开发时,调整用户中心验证的key位置-->
+  <Target Name="PreBuild1" BeforeTargets="PreBuildEvent" Condition="'$(Configuration)'=='Debug'">
+    <ItemGroup>
+      <ks Include="../shared-auth-ticket-keys/*.xml" />
+      <htmls Include="wwwroot/*.html" />
+    </ItemGroup>
+    <Copy SourceFiles="@(ks)" DestinationFolder="$(OutDir)/shared-auth-ticket-keys" />
+    <Copy SourceFiles="@(htmls)" DestinationFolder="$(OutDir)/wwwroot" />
+  </Target>
+
+  <Target Name="PreBuild2" BeforeTargets="PreBuildEvent">
+    <ItemGroup>
+      <imgs Include="wwwroot/images/*.*" />      
+    </ItemGroup>
+    <Copy SourceFiles="@(imgs)" DestinationFolder="$(OutDir)/wwwroot/images" />
+  </Target>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+  
+</Project>

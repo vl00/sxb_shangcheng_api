@@ -1,0 +1,51 @@
+﻿{
+  "orderId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "orderNo": "204358987593279324",
+  "orderStatusDesc": "待支付",
+  "orderStatus": 1,
+  "orderType": 2,
+  "paymoney": 0,
+  "orderUpdateTime": "2021-01-25T13:00:02.292Z",
+  "qrcode": "string",
+  "userId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "userName": "虎叔叔",
+  "mobile": "13681888888",
+  "prods": [
+    {
+      "id": "83f4b5b5-b19c-4f0c-b66b-c9084530df7a",
+      "id_s": "yv",
+      "title": "后台新增课程--用于下架测试编辑",
+      "subtitle": "验证下架课程后，对应测评该模块显示机构信息",
+      "price": 1000,
+      "subjectDesc": "编程",
+      "subject": 108,
+      "authentication": true,
+      "orgInfo": {
+        "id": "c339fdbc-57f4-41ce-8c5b-cd79223eca45",
+        "id_s": "sxgf",
+        "name": "后台新增机构--用于下架测试编辑机构名称，我快要疯了",
+        "logo": "https://cos.sxkid.com/images/org/eval/22cef544137c4c69977219139753d865/22cef544137c4c69977219139753d865.png",
+        "authentication": true,
+        "desc": "验证下架机构后，前端展示样式是是是",
+        "subdesc": "机构下架后，对应的机构模块隐藏",
+        "courceCount": -1,
+        "evaluationCount": -1
+      },
+      "banner": [
+        "https://cos.sxkid.com/images/org/eval/e1c0a9f305db408c949ef432b4765a89/e1c0a9f305db408c949ef432b4765a89.png",
+        "https://cos.sxkid.com/images/org/eval/a6942546a34d4ba48dce102e8932d8c8/a6942546a34d4ba48dce102e8932d8c8.png",
+        "https://cos.sxkid.com/images/org/eval/bf274bb7381a48e8801de9ae0769f11c/bf274bb7381a48e8801de9ae0769f11c.png",
+        "https://cos.sxkid.com/images/org/eval/42fefc86421c452ea03e8df59d5e9f98/42fefc86421c452ea03e8df59d5e9f98.png",
+        "https://cos.sxkid.com/images/org/eval/222be34cbace4a31bcc439580ac5ffca/222be34cbace4a31bcc439580ac5ffca.png",
+        "https://cos.sxkid.com/images/org/eval/73f547e0092b47c7892cc8647842e04c/73f547e0092b47c7892cc8647842e04c.png",
+        "https://cos.sxkid.com/images/org/eval/053308a1b6d649b4926e39050f620536/053308a1b6d649b4926e39050f620536.png",
+        "https://cos.sxkid.com/images/org/eval/3f6830b46aa44d3a8166fa8d0f0e20cd/3f6830b46aa44d3a8166fa8d0f0e20cd.png",
+        "https://cos.sxkid.com/images/org/eval/20566697a3b14f1287c72986d4def251/20566697a3b14f1287c72986d4def251.png",
+        "https://cos.sxkid.com/images/org/eval/905e66c9295f4f2e9b179403053e6aed/905e66c9295f4f2e9b179403053e6aed.png"
+      ],
+      "prodType": 1,
+      "buyAmount": 1,
+      "pricesAll": 1000
+    }
+  ]
+}

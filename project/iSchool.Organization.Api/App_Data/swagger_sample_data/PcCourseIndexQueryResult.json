@@ -1,0 +1,57 @@
+﻿{
+  "pageInfo": {
+    "currentPageItems": [
+      {
+        "id_s": "gu",
+        "name": "机构名1",
+        "title": "课程标题1",
+        "subtitle": "课程副标题1",
+        "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "no": null,
+        "banner": [
+          "https://cos.sxkid.com/images/org/productbanner/a094e523-bb77-4648-bf93-ff8af273e6f1/a3d8742a-803a-4c2a-8290-8107afdcb85e.jpg",
+          "https://cos.sxkid.com/images/org/productbanner/a094e523-bb77-4648-bf93-ff8af273e6f1/a3d8742a-803a-4c2a-8290-8107afdcb85e.jpg"
+        ],
+        "price": 9,
+        "origPrice": 100,
+        "stock": 0,
+        "authentication": true
+      },
+      {
+        "id_s": "gu",
+        "name": "机构名1",
+        "title": "课程标题1",
+        "subtitle": "课程副标题1",
+        "id": "6fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "no": null,
+        "banner": [
+          "https://cos.sxkid.com/images/org/productbanner/a094e523-bb77-4648-bf93-ff8af273e6f1/a3d8742a-803a-4c2a-8290-8107afdcb85e.jpg",
+          "https://cos.sxkid.com/images/org/productbanner/a094e523-bb77-4648-bf93-ff8af273e6f1/a3d8742a-803a-4c2a-8290-8107afdcb85e.jpg"
+        ],
+        "price": 9,
+        "origPrice": 100,
+        "stock": 0,
+        "authentication": false
+      }
+    ],
+    "currentPageIndex": 1,
+    "pageSize": 10,
+    "totalItemCount": 2,
+    "totalPageCount": 1
+  },
+  "orgInfo": {
+    "id": "0fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "id_s": "bpmc",
+    "name": "专门da老虎"
+  },
+  "subjs": [
+    { "key": 101, "value": "语文", "sort": 1 },
+    { "key": 102, "value": "数学", "sort": 2 },
+    { "key": 103, "value": "英语", "sort": 3 },
+    { "key": 104, "value": "Steam", "sort": 4 },
+    { "key": 105, "value": "绘画", "sort": 5 },
+    { "key": 106, "value": "音乐", "sort": 6 },
+    { "key": 107, "value": "思维", "sort": 7 },    
+    { "key": 199, "value": "其他", "sort": 99 }
+  ]
+}

@@ -1,0 +1,79 @@
+﻿using CSRedis;
+using iSchool.Domain.Repository.Interfaces;
+using iSchool.Infrastructure;
+using iSchool.Organization.Appliaction.RequestModels;
+using iSchool.Organization.Appliaction.RequestModels.Evaluations;
+using iSchool.Organization.Domain;
+using iSchool.Organization.Domain.Enum;
+using iSchool.Organization.Domain.Security;
+using MediatR;
+using System;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
+/**
+ *   没活动的原流程
+ */
+namespace iSchool.Organization.Appliaction.Service.Specials
+{
+    public class AddEvaluationToSpecialsHandler : IRequestHandler<AddEvaluationToSpecialsCommand, bool>
+    {
+        private readonly IRepository<SpecialBind> _specialbindRepository;
+        private readonly IUserInfo _userInfo;
+        IMediator _mediator;
+        CSRedisClient redis;
+
+        public AddEvaluationToSpecialsHandler(IRepository<SpecialBind> specialbindRepository,
+            IUserInfo userInfo, CSRedisClient redis,
+            IMediator mediator)
+        {
+            _specialbindRepository = specialbindRepository;
+            _userInfo = userInfo;
+            _mediator = mediator;
+            this.redis = redis;
+        }
+
+        public async Task<bool> Handle(AddEvaluationToSpecialsCommand request, CancellationToken cancellationToken)
+        {
+            //从redis中获取evaluation信息
+            var evaluation = await _mediator.Send(new EvaluationSimpleQuery { Id = request.EvltId });
+
+            //没有权限
+            if (evaluation.UserId != _userInfo.UserId)
+                throw new AuthResponseException();
+
+            if (evaluation.Status != (byte)EvaluationStatusEnum.Ok)
+                throw new CustomResponseException("当前状态不能添加专题！");
+
+            var specials = await _mediator.Send(new SimpleSpecialQuery());
+            if (!specials.Any(p => p.Id == request.SpecialId))
+                throw new CustomResponseException("专题不存在！");
+
+
+
+
+            var bind = _specialbindRepository.Get(p => p.IsValid == true && p.Evaluationid == request.EvltId);
+            if (bind == null)
+            {
+                bind = new SpecialBind
+                {
+                    Id = Guid.NewGuid(),
+                    Evaluationid = request.EvltId,
+                    Specialid = request.SpecialId,
+                    IsValid = true
+                };
+
+                var result = _specialbindRepository.Insert(bind);
+            }
+            else if (bind.Specialid != request.SpecialId)
+            {
+                bind.Specialid = request.SpecialId;
+                _specialbindRepository.Update(bind);
+            }
+
+            _ = redis.HDelAsync(string.Format(CacheKeys.Evlt, request.EvltId), "base");
+
+            return true;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+﻿[
+  {
+    "Id": "E81C8DEC-9380-4CB7-8083-4AAD9201F8B3",
+    "Name": "商品1",
+    "cashbackMoney": 20.8
+  },
+  {
+    "Id": "E81C8DEC-6380-4CB7-8083-4AAD9201F8B3",
+    "Name": "属性1-属性2",
+    "cashbackMoney": 12.89
+  }
+]

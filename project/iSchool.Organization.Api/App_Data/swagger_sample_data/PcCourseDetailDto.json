@@ -1,0 +1,75 @@
+﻿{
+  "id_s": "kjx",
+  "cName": "课程名",
+  //"orgNoId": "string",
+  //"logo": "string",
+  //"orgName": "string",
+  //"authentication": true,
+  //"desc": "string",
+  //"subDesc": "string",
+  "orgInfo": {
+    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "id_s": "xff",
+    "name": "捕获老虎",
+    "logo": "https://cos.sxkid.com/images/org/orglogo/d929ab8e-808f-417d-a8de-57c207c53e7e/557f2964-32ae-4d61-89d3-36a0bfd76e31.jpg",
+    "authentication": true,
+    "desc": "机构标题",
+    "subdesc": "机构副标题",
+    "courceCount": 0,
+    "evaluationCount": 0
+  },
+  "relatedEvaluations": [
+    {
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "id_s": "ncx",
+      "title": "评测标题",
+      "stick": true,
+      "isPlaintext": true,
+      "cover": "https://cos.sxkid.com/images/org/eval/b1ef573f318d4d61bc15e651130b9c42/b1ef573f318d4d61bc15e651130b9c42.png",
+      "authorId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "authorName": "虎叔叔",
+      "authorHeadImg": "https://cdn.sxkid.com/images/head.png",
+      "createTime": "2020-11-27T10:19:24.085Z",
+      "collectionCount": 1,
+      "commentCount": 3,
+      "likeCount": 1,
+      "isLikeByMe": true,
+      "viewCount": 11
+    }
+  ],
+  "relatedCourses": {
+    "isCurrOrgCourses": true,
+    "courses": [
+      {
+        //"no": "string",
+        "id_s": "khg",
+        "name": "火热古河给给给",
+        "title": "不然估计二表哥科技部个拷贝个客人表格",
+        "subtitle": "jgekjghkwhgkwhglw",
+        "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "banner": [
+          "https://cos.sxkid.com/images/org/productbanner/a094e523-bb77-4648-bf93-ff8af273e6f1/a3d8742a-803a-4c2a-8290-8107afdcb85e.jpg",
+          "https://cos.sxkid.com/images/org/productbanner/a094e523-bb77-4648-bf93-ff8af273e6f1/a3d8742a-803a-4c2a-8290-8107afdcb85e.jpg"
+        ],
+        "price": 0,
+        "origPrice": 0,
+        "stock": 0,
+        "authentication": true
+      }
+    ]
+  },
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "subj": "199",
+  "subject": "111",
+  "subjectDesc": "早教",
+  "banner": [
+    "https://cos.sxkid.com/images/org/productbanner/a094e523-bb77-4648-bf93-ff8af273e6f1/a3d8742a-803a-4c2a-8290-8107afdcb85e.jpg",
+    "https://cos.sxkid.com/images/org/productbanner/a094e523-bb77-4648-bf93-ff8af273e6f1/a3d8742a-803a-4c2a-8290-8107afdcb85e.jpg"
+  ],
+  "title": "课程标题",
+  "subtitle": "课程副标题",
+  "isCurrentUserCollection": true,
+  "evaluationInfo": null,
+  "detail": "<img src=\"https://cos.sxkid.com/images/org/productbanner/a094e523-bb77-4648-bf93-ff8af273e6f1/a3d8742a-803a-4c2a-8290-8107afdcb85e.jpg\" />",
+  "loginUserMobile": "138****888"
+}

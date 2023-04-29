@@ -1,0 +1,14 @@
+﻿{
+  "id": "c870a7b7-8195-470b-9f86-db73322e70d9",
+  "CourseId": "4606B1EA-337E-4A59-9101-ABEA46C6C2D3",
+  "Title": "大课标题-教你今晚打老虎",
+  "Price": 100,
+  "Origprice": 120,
+  "StartTime": "2021-03-08",
+  "EndTime": "2021-03-10",
+  "Condition": "达成条件",
+  "CashbackType": 2,
+  "CashbackTypeDesc": "元",
+  "CashbackValue": 1.2,
+  "Desc": "老虎老虎老虎老虎老虎老虎老虎老虎老虎\n老虎老虎老虎老虎老虎老虎老虎老虎老虎老虎\n老虎老虎老虎老虎老虎老虎老虎老虎老虎老虎老虎老虎"
+}

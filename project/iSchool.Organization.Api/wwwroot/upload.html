@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>upload</title>
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+	
+</style>
+</head>
+<body>
+<div class="form-horizontal" style="margin-top:80px;">
+    <div class="form-group">
+		<div class="col-md-10">
+			<label for="usel1">图片</label>
+			<input name="usel1" id="usel1" type="radio" g="usel" checked="checked" />
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<label for="usel2">视频</label>
+			<input name="usel2" id="usel2" type="radio" g="usel" />
+		</div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-10">
+            <input name="file" id="file" type="file" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" id="submit" value="上传" class="btn btn-success" />
+        </div>
+    </div>
+</div>
+<!-- js -->
+<script>
+var ffid = '';
+var pdir = 'special';
+
+$(function() {
+	$('[g=usel]').on('click', function() {
+		var self = $(this), b = self.prop('checked');
+		$('[g=usel]').prop('checked', false);
+		self.prop('checked', 'checked');
+	});
+
+	document.querySelector('#submit').addEventListener('click', function() {
+		var url = document.getElementById('usel1').checked ? '/api/home/img'
+			: document.getElementById('usel2').checked ? '/api/home/video'
+			: undefined;
+		onUpload(url, document.querySelector('#file').files[0], function (res) {
+			// upload ok
+			console.log(res);
+		});
+	});
+});
+
+function onUpload(url, file, ok) {
+    var pause = false; //暂停
+    var totalSize = file.size; //文件大小
+    var blockSize = 1024 * 100; //块大小
+    var blockCount = Math.ceil(totalSize / blockSize); //总块数
+
+    //uploadCount++;
+    uploadPost(file, totalSize, blockCount, blockSize, 1, ffid);
+
+    function uploadPost(file, totalSize, blockCount, blockSize, index, id) {
+        if (pause) return;
+
+        var formData = new FormData();
+        formData.append('fileName', file.name); //文件名
+        //formData.append('ext', file.type.replace('image/', '')); //扩展名
+        formData.append('ext', (file.name.indexOf('.') > -1 ? file.name.substring(file.name.indexOf('.') + 1) : '')); //扩展名
+        formData.append('total', blockCount); //总块数
+        formData.append('totalSize', totalSize); //文件大小
+        formData.append('index', index); //第几个块
+        formData.append('size', blockSize); //块大小
+        formData.append('id', id); //文件id
+        //formData.append('thumbsize', '80*80'); //缩略图大小
+        formData.append('p', pdir); //服务文件夹
+        formData.append('imgindex', 11111); 
+
+        var start = (index - 1) * blockSize, end = Math.min(totalSize, start + blockSize);
+        var block = file.slice(start, end);
+        formData.append('', block); //块字节数据
+
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function (res) {
+				if (res.status == 200) {
+                //if (res.succeed) {
+                    on_upload_progress((index / blockCount * 100).toFixed(2));
+
+                    if (index < blockCount) {
+                        uploadPost(file, totalSize, blockCount, blockSize, ++index, res.data.id);
+                    } else {
+                        ok(res);
+                        //uploadCount--;
+                    }
+                } else {
+                    $.error('上传失败:' + ' ' + res.msg);
+                }
+            },
+            fail: function () {
+                $.error('上传失败');
+            }
+        });
+    }
+
+    function on_upload_progress(per00) { }
+}
+</script>
+</body>
+</html>

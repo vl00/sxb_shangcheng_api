@@ -1,0 +1,30 @@
+﻿{
+  "currentPageItems": [
+    {
+      "id": "9693C56A-607F-4D61-948F-000007D6CDB0",
+      "id_s": "gu",
+      "name": "斑马",
+      "logo": "https://cos.sxkid.com/images/org/orglogo/33031765-fe21-4838-a014-e867d2cf0a95/a14859f6-6501-48a4-8266-28f0105926f3.jpg",
+      "authentication": true,
+      "desc": "副标题1",
+      "subdesc": "副标题2",
+      "courceCount": 10,
+      "evaluationCount": 110
+    },
+    {
+      "id": "1693C56A-607F-4D61-948F-000007D6CDB9",
+      "id_s": "g6",
+      "name": "新东方",
+      "logo": "https://cos.sxkid.com/images/org/orglogo/33031765-fe21-4838-a014-e867d2cf0a95/a14859f6-6501-48a4-8266-28f0105926f3.jpg",
+      "authentication": false,
+      "desc": "副标题1",
+      "subdesc": "副标题2",
+      "courceCount": 10,
+      "evaluationCount": 110
+    }
+  ],
+  "currentPageIndex": 1,
+  "pageSize": 10,
+  "totalItemCount": 2,
+  "totalPageCount": 1
+}

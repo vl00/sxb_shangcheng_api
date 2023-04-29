@@ -1,0 +1,96 @@
+﻿{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "id_s": "jkjk",
+  "name": "机构打虎",
+  "orgBaseMap": "https://cos.sxkid.com/images/org/eval/af142931b6494374b15c4ed8ae2867b3/af142931b6494374b15c4ed8ae2867b3.png",
+  "logo": "https://cos.sxkid.com/images/org/orglogo/d929ab8e-808f-417d-a8de-57c207c53e7e/557f2964-32ae-4d61-89d3-36a0bfd76e31.jpg",
+  "authentication": true,
+  "intro": "<img src=\"https://cos.sxkid.com/images/org/orgdetail/d929ab8e-808f-417d-a8de-57c207c53e7e/f864c938-93df-4f6e-bf42-a16d750b88d8.jpg\"/><img src=\"https://cos.sxkid.com/images/org/orgdetail/d929ab8e-808f-417d-a8de-57c207c53e7e/62afcc0d-8a2e-47ba-813f-700374d1b1ce.jpg\"/><img src=\"https://cos.sxkid.com/images/org/orgdetail/d929ab8e-808f-417d-a8de-57c207c53e7e/222eb9e7-0c57-4079-b767-5ba6d4ca3042.jpg\"/><img src=\"https://cos.sxkid.com/images/org/orgdetail/d929ab8e-808f-417d-a8de-57c207c53e7e/ad6324a1-50cd-43ca-8f2f-5a0f68f1f8ab.jpg\"/>",
+  "relatedCourses": {
+    "subj": "199",
+    "Courses": [
+      {
+        "no": null,
+        "id_s": "kmn",
+        "name": "课程look虎",
+        "title": "课程title",
+        "subtitle": "课程subtitle",
+        "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "banner": [
+          "https://cos.sxkid.com/images/org/orglogo/d929ab8e-808f-417d-a8de-57c207c53e7e/557f2964-32ae-4d61-89d3-36a0bfd76e31.jpg"
+        ],
+        "price": 0,
+        "origPrice": 0,
+        "stock": 0,
+        "authentication": false
+      }
+    ]
+  },
+  "recommendEvaluations": {
+    "subj": "101",
+    "Evaluations": [
+      {
+        "id": "1fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "id_s": "liam",
+        "title": "评测liam虎",
+        "stick": true,
+        "isPlaintext": true,
+        "cover": "https://cos.sxkid.com/images/org/eval/b1ef573f318d4d61bc15e651130b9c42/b1ef573f318d4d61bc15e651130b9c42.png",
+        "authorId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "authorName": "虎叔叔",
+        "authorHeadImg": "https://cdn.sxkid.com/images/head.png",
+        "createTime": "2020-11-27T07:48:35.664Z",
+        "collectionCount": 0,
+        "commentCount": 0,
+        "likeCount": 0,
+        "isLikeByMe": true,
+        "viewCount": 0
+      },
+      {
+        "id": "3fa85f64-5717-4578-b3fc-2c963f66afa6",
+        "id_s": "liam",
+        "title": "评测liam虎",
+        "stick": true,
+        "isPlaintext": true,
+        "cover": "https://cos.sxkid.com/images/org/eval/b1ef573f318d4d61bc15e651130b9c42/b1ef573f318d4d61bc15e651130b9c42.png",
+        "authorId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "authorName": "虎叔叔",
+        "authorHeadImg": "https://cdn.sxkid.com/images/head.png",
+        "createTime": "2020-11-27T07:48:35.664Z",
+        "collectionCount": 0,
+        "commentCount": 0,
+        "likeCount": 0,
+        "isLikeByMe": true,
+        "viewCount": 0
+      },
+      {
+        "id": "3fa85f64-5747-4562-b3fc-2c963f66afa6",
+        "id_s": "liam",
+        "title": "评测liam虎",
+        "stick": true,
+        "isPlaintext": true,
+        "cover": "https://cos.sxkid.com/images/org/eval/b1ef573f318d4d61bc15e651130b9c42/b1ef573f318d4d61bc15e651130b9c42.png",
+        "authorId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "authorName": "虎叔叔",
+        "authorHeadImg": "https://cdn.sxkid.com/images/head.png",
+        "createTime": "2020-11-27T07:48:35.664Z",
+        "collectionCount": 0,
+        "commentCount": 0,
+        "likeCount": 0,
+        "isLikeByMe": true,
+        "viewCount": 0
+      }
+    ]
+  },
+  "orgInfo": {
+    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "id_s": "jkjk",
+    "name": "机构打虎",
+    "logo": "https://cos.sxkid.com/images/org/orglogo/d929ab8e-808f-417d-a8de-57c207c53e7e/557f2964-32ae-4d61-89d3-36a0bfd76e31.jpg",
+    "authentication": true,
+    "desc": "机构打虎desc",
+    "subdesc": "机构打虎subdesc",
+    "courceCount": 10,
+    "evaluationCount": 10
+  }
+}
